@@ -15,7 +15,8 @@
 }
 
 section.main {
-    background-image: url('images/bg-grey.jpg');
+    /* background-image: url('images/bg-grey.jpg'); */
+    background-color: #766B6E;
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -66,7 +67,7 @@ section.main {
 }
 
 .items-menu a.contact-btn {
-    background-color: #72D6CA;
+    background-color: #0197d9;
     padding: 10px 10px;
     border-radius: 10px;
     color: #766B6E;
@@ -182,7 +183,7 @@ section.benefits {
 }
 
 .left a {
-    background-color: #72D6CA;
+    background-color: #0197d9;
     padding: 18px;
     border-radius: 10px;
     color: #766B6E;
@@ -328,7 +329,7 @@ section.depoiments {
 }
 
 .active-bullet {
-    background-color: #72D6CA;
+    background-color: #0197d9;
 }
 
 @media screen and (max-width: 800px) {
