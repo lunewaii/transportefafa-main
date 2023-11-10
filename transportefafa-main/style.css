@@ -252,6 +252,7 @@ section.depoiments {
     height: 90vh;
     flex-direction: column;
 }
+
 .tudo {
     display: flex;
     justify-content: center;
@@ -335,7 +336,9 @@ section.depoiments {
 /*                                       CARROSSEL                                    */
 /* .................................................................................. */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     border: 0;
@@ -440,7 +443,7 @@ section.depoiments {
     .slide-description {
         padding: 10px;
     }
-    
+
     .slide-description h3 {
         font-size: 24px;
         top: 0;
@@ -454,11 +457,11 @@ section.depoiments {
         margin-top: -20px;
         font-size: 28px;
     }
-    
+
     .slide-nav-previous {
         left: 10px;
     }
-    
+
     .slide-nav-next {
         right: 10px;
     }

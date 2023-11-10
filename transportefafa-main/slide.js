@@ -1,7 +1,7 @@
 'use strict'
 
-const slideWrapper = document.querySelector('[data-slide="wrapper"]') 
-const slideList = document.querySelector('[data-slide="list"]') 
+const slideWrapper = document.querySelector('[data-slide="wrapper"]')
+const slideList = document.querySelector('[data-slide="list"]')
 const navPreviousButton = document.querySelector('[data-slide="nav-previous-button"]')
 const navNextButton = document.querySelector('[data-slide="nav-next-button"]')
 const controlsWrapper = document.querySelector('[data-slide="controls-wrapper"]')
@@ -34,26 +34,26 @@ function getCenterPosition({ index }) {
 }
 
 function setVisibleSlide({ index, animate }) {
-    if(index === 0 || index === slideItems.length - 1) {
+    if (index === 0 || index === slideItems.length - 1) {
         index = state.currentSlideIndex
     }
     const position = getCenterPosition({ index })
     state.currentSlideIndex = index
     slideList.style.transition = animate === true ? 'transform .5s' : 'none'
     activeControlButton({ index })
-    translateSlide({position: position})
+    translateSlide({ position: position })
 }
 
 function nextSlide() {
-    setVisibleSlide({ index: state.currentSlideIndex + 1, animate: true})
+    setVisibleSlide({ index: state.currentSlideIndex + 1, animate: true })
 }
 
 function previousSlide() {
-    setVisibleSlide({ index: state.currentSlideIndex - 1, animate: true})
+    setVisibleSlide({ index: state.currentSlideIndex - 1, animate: true })
 }
 
 function createControlButtons() {
-    slideItems.forEach(function(){
+    slideItems.forEach(function () {
         const controlButton = document.createElement('button')
         controlButton.classList.add('slide-control-button')
         controlButton.classList.add('fas')
@@ -67,10 +67,10 @@ function activeControlButton({ index }) {
     const slideItem = slideItems[index]
     const dataIndex = Number(slideItem.dataset.index)
     const controlButton = controlButtons[dataIndex]
-    controlButtons.forEach(function(controlButtonItem) {
+    controlButtons.forEach(function (controlButtonItem) {
         controlButtonItem.classList.remove('active')
     })
-    if(controlButton) controlButton.classList.add('active')
+    if (controlButton) controlButton.classList.add('active')
 }
 
 function createSlideClones() {
@@ -115,12 +115,12 @@ function onMouseMove(event) {
 
 function onMouseUp(event) {
     const pointsToMove = event.type.includes('touch') ? 50 : 150
-    if(state.movement < -pointsToMove) {
+    if (state.movement < -pointsToMove) {
         nextSlide()
     } else if (state.movement > pointsToMove) {
         previousSlide()
     } else {
-        setVisibleSlide({ index: state.currentSlideIndex, animate: true})
+        setVisibleSlide({ index: state.currentSlideIndex, animate: true })
     }
     state.movement = 0
     const slideItem = event.currentTarget
@@ -134,7 +134,7 @@ function onTouchStart(event, index) {
     slideItem.addEventListener('touchmove', onTouchMove)
 }
 
-function onTouchMove (event) {
+function onTouchMove(event) {
     event.clientX = event.touches[0].clientX
     onMouseMove(event)
 }
@@ -151,40 +151,40 @@ function onControlButtonClick(index) {
 
 function onSlideListTransitionEnd() {
     const slideItem = slideItems[state.currentSlideIndex]
-    
-    if(slideItem.classList.contains('slide-cloned') && Number(slideItem.dataset.index) > 0) {
+
+    if (slideItem.classList.contains('slide-cloned') && Number(slideItem.dataset.index) > 0) {
         setVisibleSlide({ index: 2, animate: false })
     }
-    if(slideItem.classList.contains('slide-cloned') && Number(slideItem.dataset.index) < 0) {
+    if (slideItem.classList.contains('slide-cloned') && Number(slideItem.dataset.index) < 0) {
         setVisibleSlide({ index: slideItems.length - 3, animate: false })
     }
 }
 
 function setAutoPlay() {
-    if(state.autoPlay) {
-        slideInterval = setInterval(function() {
-            setVisibleSlide({index: state.currentSlideIndex + 1 , animate: true})
+    if (state.autoPlay) {
+        slideInterval = setInterval(function () {
+            setVisibleSlide({ index: state.currentSlideIndex + 1, animate: true })
         }, state.timeInterval)
     }
 }
 
 function setListeners() {
     controlButtons = document.querySelectorAll('[data-slide="control-button"]')
-    controlButtons.forEach(function(controlButton, index) {
-        controlButton.addEventListener('click', function(event) {
+    controlButtons.forEach(function (controlButton, index) {
+        controlButton.addEventListener('click', function (event) {
             onControlButtonClick(index)
         })
     })
 
-    slideItems.forEach(function(slideItem, index) {
-        slideItem.addEventListener('dragstart', function(event) {
+    slideItems.forEach(function (slideItem, index) {
+        slideItem.addEventListener('dragstart', function (event) {
             event.preventDefault()
         })
-        slideItem.addEventListener('mousedown', function(event) {
+        slideItem.addEventListener('mousedown', function (event) {
             onMouseDown(event, index)
         })
         slideItem.addEventListener('mouseup', onMouseUp)
-        slideItem.addEventListener('touchstart', function(event) {
+        slideItem.addEventListener('touchstart', function (event) {
             onTouchStart(event, index)
         })
         slideItem.addEventListener('touchend', onTouchEnd)
@@ -192,22 +192,22 @@ function setListeners() {
     navNextButton.addEventListener('click', nextSlide)
     navPreviousButton.addEventListener('click', previousSlide)
     slideList.addEventListener('transitionend', onSlideListTransitionEnd)
-    slideWrapper.addEventListener('mouseenter', function() {
+    slideWrapper.addEventListener('mouseenter', function () {
         clearInterval(slideInterval)
     })
-    slideWrapper.addEventListener('mouseleave', function() {
+    slideWrapper.addEventListener('mouseleave', function () {
         setAutoPlay()
     })
     let resizeTimeout
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         clearTimeout(resizeTimeout)
-        resizeTimeout = setTimeout(function() {
-            setVisibleSlide({index: state.currentSlideIndex, animate: true})
+        resizeTimeout = setTimeout(function () {
+            setVisibleSlide({ index: state.currentSlideIndex, animate: true })
         }, 1000)
     })
 }
 
-function initSlider({startAtIndex = 0, autoPlay = true, timeInterval = 3000}) {
+function initSlider({ startAtIndex = 0, autoPlay = true, timeInterval = 3000 }) {
     state.autoPlay = autoPlay
     state.timeInterval = timeInterval
     createControlButtons()
