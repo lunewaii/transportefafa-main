@@ -31,7 +31,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="porques">
         <div class="inner">
             <h2>Por que nós?</h2>
@@ -136,49 +136,29 @@
             </div>
     </section>
 
-    <section class="depoiments">
-        <div class="th1">
-            <h1>Depoimentos</h1>
-        </div>
-        <div class="boxes">
-            <div class="tudo">
-                <div class="container">
-                    <div class="deps" style="opacity: 1;">
-                        <img class="pfp" src="images/DEPOIMENTO1.png" />
-                        <div class="txt">
-                            <h2>Miriam Souza</h2>
-                            <h3>Uber</h3>
-                            <p>O trabalho da Agência Bold foi fundamental para o nosso posicionamento e nossas
-                                estratégias de 2021. Juntos tivemos excelentes resultados e nossos clientes ficaram
-                                surpresos com a qualidade. Foi um trabalho incrível feito a muitas mãos pela Uber e pelo
-                                time da Agência Bold.</p>
-                        </div>
-                        <img class="stars" src="images/5stars.svg" />
-                    </div>
-                    <div class="deps">
-                        <img class="pfp" src="images/DEPOIMENTO2.png" />
-                        <h2>Lucas Mendes</h2>
-                        <h3>The North Face</h3>
-                        <p>Buscamos a Agência Bold para nos ajudar com campanhas de growth marketing focadas em um
-                            público extremamente específico. O produto teve faturamento maior que 300%.</p>
-                        <img class="stars" src="images/5stars.svg" />
-                    </div>
-                    <div class="deps">
-                        <img class="pfp" src="images/DEPOIMENTO3.png" />
-                        <h2>Zaya Menphis</h2>
-                        <h3>Rappi</h3>
-                        <p>A estratégia de lançamento da marca não seria a mesma sem o trabalho comprometido da Agência
-                            Bold. Obrigado ao Vinícius, que abraçou nossos desafios como um de nós.</p>
-                        <img class="stars" src="images/5stars.svg" />
-                    </div>
-                </div>
+    <script>
+        var deps = document.querySelectorAll('.container .deps');
+        var lastIndex = 0;
 
-                <div class="bullets">
-                    <div class="bullet-single active-bullet"></div>
-                    <div class="bullet-single"></div>
-                    <div class="bullet-single"></div>
-                </div>
-            </div>
-    </section>
+        deps.forEach((item, index) => {
+            console.log(document.querySelectorAll('.bullet-single')[index]);
+            document.querySelectorAll('.bullet-single')[index]
+                .addEventListener('click', () => {
+                    let lastImage = document.querySelectorAll('.container .deps')[lastIndex];
+                    let actualImage = document.querySelectorAll('.container .deps')[index];
+                    //agora, resetar as bullets e setar a nova
+
+                    document.querySelectorAll('.bullet-single')[lastIndex]
+                        .classList.remove('active-bullet');
+
+                    document.querySelectorAll('.bullet-single')[index]
+                        .classList.add('active-bullet');
+
+                    lastImage.style.opacity = 0;
+                    actualImage.style.opacity = 1;
+                    lastIndex = index;
+                });
+        });
+    </script>
 </body>
 </html>
