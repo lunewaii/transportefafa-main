@@ -117,6 +117,8 @@ section.main {
     flex-direction: column;
     overflow: hidden;
     width: 100%;
+    min-height: 30%;
+    max-height: 30%;
 }
 
 .slide-list {
@@ -127,7 +129,7 @@ section.main {
     cursor: grab;
     flex-shrink: 0;
     padding: 0 10px;
-    width: 90vw;
+    width: 70%;
 }
 
 .slide-content {
