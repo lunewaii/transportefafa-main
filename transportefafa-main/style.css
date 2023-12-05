@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: white;
+    color: black;
 }
 
 .inner {
@@ -310,7 +310,7 @@ section.benefits {
     display: flex;
     width: 100%;
     padding: 40px 0;
-    background-color: #433E0E;
+    background-color: #D4D2D5;
     align-items: center;
     height: 100vh;
 }
