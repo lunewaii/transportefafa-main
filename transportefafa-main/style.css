@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: black;
+    /* color: black; */
 }
 
 .inner {
@@ -12,6 +12,7 @@
     padding: 0 1%;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    color: white;
 }
 
 section.main {
@@ -27,6 +28,7 @@ section.main {
     width: 100%;
     align-items: center;
     padding: 1%;
+    color: white;
     /* background: green; */
 }
 
@@ -59,6 +61,7 @@ section.main {
     text-decoration: none;
     display: inline-block;
     margin: 0 2%;
+    color: white;
 }
 
 .items-menu a:hover {
@@ -376,7 +379,7 @@ section.benefits {
 /* .................................................................................. */
 
 section.depoiments {
-    background-color: #96897B;
+    background-color: #1D3354;
     /* background-image: url('images/bg-grey.jpg'); */
     /* background-color: #696969; */
     background-position: center;
