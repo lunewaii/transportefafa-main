@@ -315,7 +315,7 @@ section.porques>.inner>p {
 /* ........................................... */
 
 section.benefits {
-    display: flex;
+    display: block;
     width: 100%;
     padding: 40px 0;
     background-color: #D4D2D5;
@@ -323,8 +323,12 @@ section.benefits {
     height: 100vh;
 }
 
+.lados{
+    display: flex;
+}
+
 section.benefits h1{
-    /* height: 100%; */
+    padding: 2%;
 }
 
 .left {
@@ -332,10 +336,16 @@ section.benefits h1{
     padding: 2%;
 }
 
-.left h1 {
+/* .left h1 {
     font-size: 50px;
     margin-bottom: 5%;
     margin-left: 20%;
+    padding: 1%;
+} */
+
+.left h3{
+    padding: 1%;
+    font-size: 23px;
 }
 
 .left a {
@@ -374,6 +384,11 @@ section.benefits h1{
 .right {
     width: 50%;
     height: 50%;
+}
+
+.right h3{
+    padding: 1%;
+    font-size: 23px;
 }
 
 .right img {
