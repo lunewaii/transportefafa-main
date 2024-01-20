@@ -328,12 +328,13 @@ section.benefits {
 
 section.benefits h1{
     padding: 2%;
-    font-size: 45px;
+    padding-top: 2%;
+    font-size: 40px;
 }
 
 .left {
     width: 50%;
-    /* padding: 2%; */
+    padding: 2%;
 }
 
 /* .left h1 {
@@ -348,13 +349,13 @@ section.benefits h1{
     font-size: 23px;
 }
 
-.left a {
+/* .left a {
     background-color: #0197d9;
     padding: 18px;
     border-radius: 10px;
     color: white;
     text-decoration: none;
-}
+} */
 
 .btn {
     padding: 2%;
@@ -382,7 +383,7 @@ section.benefits h1{
 
 .right {
     width: 50%;
-    /* padding: 2%; */
+    padding: 2%;
 }
 
 .right h3{
