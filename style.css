@@ -10,6 +10,21 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
+body{
+    position: relative;
+}
+
+.whatsapp{
+    position: fixed;
+    right: 2%;
+    padding-top: 40%;
+}
+
+.whatsapp img{
+    max-width: 80px;
+    max-height: 80px;
+}
+
 .inner {
     display: flex;
     margin: o auto;
@@ -402,7 +417,7 @@ section.rotas{
 
 .rotas-bairros{
     display: flex;
-    padding: 5%;
+    /* padding: 5%; */
 }
 
 section.rotas h1{
@@ -415,7 +430,8 @@ section.rotas h1{
 }
 
 section.rotas h3{
-        padding: 5%;
+    padding: 5%;
+    font-size: 160%;
 }
 
 .left-rota{
