@@ -327,9 +327,9 @@ section.benefits {
 }
 
 section.benefits h1{
-    padding: 2%;
+    font-size: 50px;
     padding-top: 2%;
-    font-size: 40px;
+    margin-left: 8%;
 }
 
 .left {
@@ -391,13 +391,62 @@ section.benefits h1{
     font-size: 23px;
 }
 
+/* ........................................... */
+/*                   ROTAS                     */
+/* ........................................... */
+
+section.rotas{
+    background-color: #1D3354;
+    color: white;
+}
+
+.rotas-bairros{
+    display: flex;
+    padding: 5%;
+}
+
+.rotas-bairros a{
+}
+
+section.rotas h1{
+    font-size: 50px;
+    padding-top: 2%;
+    margin-left: 10%;
+    text-decoration-line: underline;
+    text-decoration-color: #FFD046;
+    text-decoration-thickness: 4px;
+}
+
+section.rotas h3{
+        padding: 5%;
+}
+
+.left-rota{
+    padding: 5%;
+    width: 33.33%;
+    align-items: end;
+    text-align: end;
+}
+
+.middle{
+    padding: 5%;
+    width: 33.33%;
+    text-align: center;
+    color: #FFD046;
+}
+
+.right-rota{
+    padding: 5%;
+    width: 33.33%;
+}
+
 
 /* .................................................................................. */
 /*                                FIM DA TERCEIRA PAGINA                              */
 /* .................................................................................. */
 
 section.depoiments {
-    background-color: #1D3354;
+    background-color: #D4D2D5;
     /* background-image: url('images/bg-grey.jpg'); */
     /* background-color: #696969; */
     background-position: center;
@@ -405,9 +454,9 @@ section.depoiments {
 }
 
 .th1 h1 {
-    color: white;
+    color: black;
     font-size: 50px;
-    padding-top: 2%;
+    padding-top: 5%;
     margin-left: 10%;
 }
 
@@ -467,10 +516,12 @@ section.depoiments {
 
 .container .deps h2 {
     color: #766B6E;
+    padding: 2%;
 }
 
 .container .deps h3 {
     color: #766B6E;
+    padding: 2%;
 }
 
 .pfp {
