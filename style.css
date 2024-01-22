@@ -606,39 +606,8 @@ section.depoiments {
 /* ........................................... */
 
 @media screen and (max-width: 800px) {
-    .diferenciais {
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center;
-    }
-
-    .box-diferenciais {
-        width: 80%;
-        margin-right: 0;
-        height: 20%;
-    }
-
-    .mockup img {
-        max-width: 80%;
-    }
-
-    .items-menu a.contact-btn {
-        margin-top: 5%;
-    }
-
-    section.benefits {
-        display: grid;
-        /* text-align: center; */
-    }
-
-    .left {
-        width: 100%;
-        /* background-color: red; */
-    }
-
-    .right {
-        width: 100%;
-        /* background-color: blue; */
-        text-align: center;
+    .whatsapp{
+        padding-top: 800px;
+        padding-right: 30px;
     }
 }
