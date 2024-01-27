@@ -516,8 +516,7 @@ section.depoiments {
 
 .stars {
     /* background-color: red; */
-    position: absolute;
-    bottom: 20%;
+    position:10%;
     margin: 0 auto;
     left: 0;
     right: 0;
