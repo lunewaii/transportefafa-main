@@ -360,6 +360,29 @@
     <!-- .................................................................................. 
                               js                            
  ..................................................................................  -->
+ <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDiYWLNBGRQT72wITkl_3Gld7rOqPMTW4U",
+      authDomain: "tiofafatransporteescolar-b368c.firebaseapp.com",
+      projectId: "tiofafatransporteescolar-b368c",
+      storageBucket: "tiofafatransporteescolar-b368c.appspot.com",
+      messagingSenderId: "908736256826",
+      appId: "1:908736256826:web:b973e8b24af03361574e03",
+      measurementId: "G-QFE40TTEKN"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 
     <script src="slide.js"></script>
     <script>
