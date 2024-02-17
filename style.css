@@ -562,7 +562,9 @@ section.depoiments {
     background-color: #0197d9;
 }
 
-
+/* ........................................... */
+/*               PARTE PARA MOBILE             */
+/* ........................................... */
 
 @media screen and (max-width: 768px) {
     .slide-description {
@@ -597,16 +599,5 @@ section.depoiments {
 
     .slide-control-button {
         font-size: 14px;
-    }
-}
-
-/* ........................................... */
-/*               PARTE PARA MOBILE             */
-/* ........................................... */
-
-@media screen and (max-width: 800px) {
-    .whatsapp{
-        padding-top: 800px;
-        padding-right: 30px;
     }
 }
