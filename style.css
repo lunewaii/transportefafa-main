@@ -584,4 +584,58 @@ section.depoiments {
         align-items: center;
         text-align: center;
     }
+
+    .mockup{
+        padding: 3%;
+        padding-top: 5%;
+    }
+
+    section.wrapper2 .img{
+        max-width: 40%;
+    }
+
+    section.benefits h1{
+        font-size: 40px;
+        padding: 5%;
+    }
+
+    section.benefits{
+        height: 100%;
+    }
+
+    .lados{
+        display: block;
+    }
+
+    .imgtxt2 p {
+        font-size: 17px;
+        padding: 1%;
+    }
+
+    .left{
+        width: 100%;
+        padding: 5%;
+    }
+
+    .right{
+        width: 100%;
+        padding: 5%;
+    }
+
+    .imgtxt2 img {
+        max-width: 15px;
+        max-height: 15px;
+        width: auto;
+        height: auto;
+    }
+
+    .left h3{
+        font-size: 22px;
+        padding: 2%;
+    }
+
+    .right h3{
+        font-size: 22px;
+        padding: 2%;
+    }
 }
