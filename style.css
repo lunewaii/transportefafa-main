@@ -566,6 +566,12 @@ section.depoiments {
 /* ........................................... */
 
 @media screen and (max-width: 768px) {
+
+    .whatsapp{
+        padding-top: 690px;
+        padding-right: 15px;
+    }
+
     .items-menu{
         display: none;
     }
@@ -579,7 +585,7 @@ section.depoiments {
     }
 
     .logo-menu h1 {
-        font-size: 25px;
+        font-size: 22px;
         align-items: center;
         text-align: center;
     }
