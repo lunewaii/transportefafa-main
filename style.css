@@ -486,8 +486,6 @@ section.depoiments {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80vw;
-    height: 80vh;
     flex-direction: column;
 }
 
@@ -541,6 +539,7 @@ section.depoiments {
     max-width: 30%;
     max-height: 30%;
     margin-bottom: 10%;
+    border-radius: 10px;
 }
 
 .bullets {
@@ -594,6 +593,13 @@ section.depoiments {
         max-width: 40%;
     }
 
+    .imgtxt2 img {
+        max-width: 12px;
+        max-height: 12px;
+        width: auto;
+        height: auto;
+    }
+
     section.benefits h1{
         font-size: 40px;
         padding: 5%;
@@ -637,5 +643,84 @@ section.depoiments {
     .right h3{
         font-size: 22px;
         padding: 2%;
+    }
+
+    section.rotas{
+        /* height: 100%; */
+        padding-top: 8%;
+        padding-bottom: 8%;
+        line-height: 200%;
+        display: flexbox;
+    }
+
+    section.rotas h1{
+        font-size: 40px;
+    }
+
+    section.rotas h3{
+        padding: 2%;
+        font-size: 18px;
+        text-align: center;
+        height: 20%;
+    }
+
+    section.rotas span{
+        color: #FFD046;
+    }
+
+    .left-rota{
+        padding: 2%;
+        width: 40%;
+        align-items: end;
+        text-align: end;
+    }
+    
+    .middle{
+        padding: 2%;
+        width: 33.33%;
+        text-align: center;
+        color: #FFD046;
+    }
+    
+    .right-rota{
+        padding: 2%;
+        width: 33.33%;
+    }
+
+    .rotas-bairros{
+        padding: 10%;
+        /* text-align: center; */
+    }
+
+    .th1 h1{
+        font-size: 40px;
+    }
+
+    .container{
+        width: 300px;
+        height: 400px;
+    }
+
+    .container .deps p{
+        font-size: 15px;
+        padding: 4%;
+    }
+
+    .container .deps h2{
+        font-size: 20px;
+    }
+
+    .container .deps h3{
+        font-size: 16px;
+    }
+
+    .pfp{
+        /* margin-top: 6%; */
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .boxes{
+        height: 70vh;
     }
 }
