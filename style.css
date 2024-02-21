@@ -565,7 +565,7 @@ section.depoiments {
 /*               PARTE PARA MOBILE             */
 /* ........................................... */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
 
     .whatsapp{
         padding-top: 690px;
